@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Righteous&family=Smokum&family=Work+Sans:wght@100;200;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family:'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{ 
+    /* Menü linklere tıklamalarımıza izin verir */
+    scroll-behavior: smooth;
+}
+     /* MENÜ */
+.contenedor-header{
+    background:#1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #1CB698;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a {
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: #1CB698;
+    transition: .5s;
+}
+.nav-responsive{
+    background-color: #1CB698;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.beginning{
+    background: linear-gradient(to top, rgba(30,35,38,.8),rgba(30,35,38,.1)),
+    url(img/resim1.webp);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.beginning .contenido-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+    margin-top: 100px;
+}
+.beginning .contenido-banner img{
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    display: block;
+    width: 65%;
+    margin: auto;
+    border-radius: 100%;
+}
+img:hover{
+    -ms-transform: scale(0.2);
+    -webkit-transform: scale(0.3); 
+     transform: scale(1.2);
+}
+.beginning .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+.beginning .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.beginning .contenido-banner .nets a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.beginning a i:hover{
+    -ms-transform: scale(2.3); /* IE 9 */
+    -webkit-transform: scale(2.3); /* Safari 3-8 */
+     transform: scale(2.3);
+}
+.beginning .contenido-banner .nets a:hover{
+    background-color: #1CB698;
+} 
+.about{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.about .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.about h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.about .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.about .contenido-seccion p span{
+    color: #1CB698;
+    font-weight: bold;
+}
+.about .fila{
+    display: flex;
+}
+.about .fila .col{
+    width: 50%;
+}
+.about .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.about .fila .col ul{
+    list-style: none;
+}
+.about .fila .col ul li{
+    margin: 12px 0;
+}
+.about .fila .col ul strong{
+    display: inline-block;
+    color: #1CB698;
+    width: 130px;
+}
+.about .fila .col ul span{
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.about .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.about .fila .col .contenedor-intereses .interes:hover{
+    background-color: #1CB698;
+}
+.about .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.about button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.about button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+}
+.about button:hover .overlay{
+    width: 100%;
+}
+/* SECCİON SKILLS */
+.skills{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.skills .fila{
+    display: flex;
+}
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skill .progreso{
+    background-color: #1CB698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+.skills .skill .barra-skill span{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #1CB698;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/* Bu sınıflar, javascript ortamını dinamik olarak bir araya getiriyor */
+
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript{
+    0%{width: 0%;}
+    100%{width: 20%;}
+}
+.skills .skill .html{
+    width: 0%;
+    animation: 2s html forwards;
+}
+@keyframes html{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+.skills .skill .css{
+    width: 0%;
+    animation: 2s css forwards;
+}
+@keyframes css{
+    0%{width: 0%;}
+    100%{width: 50%;}
+}
+.skills .skill .photoshop{
+    width: 0%;
+    animation: 2s photoshop forwards;
+}
+@keyframes photoshop{
+    0%{width: 0%;}
+    100%{width: 10%;}
+}
+.skills .skill .python{
+    width: 0%;
+    animation: 2s python forwards;
+}
+@keyframes python{
+    0%{width: 0%;}
+    100%{width: 5%;}
+}
+.skills .skill .communicationn{
+    width: 0%;
+    animation: 2s communicationn forwards;
+}
+@keyframes communicationn{
+    0%{width: 0%;}
+    100%{width: 50%;}
+}
+.skills .skill .work{
+    width: 0%;
+    animation: 2s work forwards;
+}
+@keyframes work{
+    0%{width: 0%;}
+    100%{width: 40%;}
+}
+.skills .skill .creativity{
+    width: 0%;
+    animation: 2s creativity forwards;
+}
+@keyframes creativity{
+    0%{width: 0%;}
+    100%{width: 50%;}
+}
+.skills .skill .devotion{
+    width: 0%;
+    animation: 2s devotion forwards;
+}
+@keyframes devotion{
+    0%{width: 0%;}
+    100%{width: 20%;}
+}
+.skills .skill .project-management{
+    width: 0%;
+    animation: 2s project-management forwards;
+}
+@keyframes project-management{
+    0%{width: 0%;}
+    100%{width: 5%;}
+}
+/* SECCİON PROJECT */
+.project{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.project .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.project h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.project .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.project .gallery .projects{
+    position: relative;
+    max-width: 340px;
+    height:fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.project .gallery .projects img{
+    width: 100%;
+    display: block;
+}
+.project .gallery .projects .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8),rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.project .gallery .projects .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.project .gallery .projects .overlay:hover{
+    opacity: 1;
+}
+.project .gallery .projects .overlay:hover h3{
+    margin-bottom: 0px;
+}   
+/* SECCION COMMUNİCATİON */
+.communication{
+    background-color: #131517;
+    color: #fff;
+    padding: 50px 0;
+}
+.communication .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.communication h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.communication .fila{
+    display: flex;
+}
+.communication .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.communication .col input, .communication .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+}
+.communication button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.communication button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+}
+.communication button:hover .overlay{
+    width: 100%;
+}
+.communication col img{
+    width: 100%;
+}
+.communication col .info{
+    position: absolute;
+    top: 40%;
+    background-color:#252A2E;
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.communication col .info ul{
+    list-style:none;
+}
+.communication col .info ul li{
+    margin-bottom: 20px;
+}
+.communication col .info ul li i{
+    color: #1CB698;
+    display: inline-block;
+    margin-right: 20px;
+}
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .nets{
+    margin-bottom: 20px;
+}
+footer .nets a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .yukari{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+} 
+::-webkit-scrollbar{
+    background: #1e2326;
+    width: 13px;
+}
+::-webkit-scrollbar-thumb{
+    background: #22e0ff;
+    border-radius: 10px 10px;
+}
